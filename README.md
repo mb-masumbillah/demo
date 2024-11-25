@@ -50,13 +50,50 @@ An advanced RESTful API for managing an online bookstore, built with **Express.j
 ## **Project Structure**
 
 ```
-src/
-├── controllers/       # Business logic for API endpoints
-├── models/            # Mongoose schemas for Products and Orders
-├── routes/            # API endpoint definitions
-├── utils/             # Utility functions (e.g., error handling)
-├── app.ts             # Main application setup
-├── server.ts          # Server entry point
+📦 book-shop-server
+├── 📂 src
+│   ├── 📂 config                 # Configuration files
+│   │   ├── db.ts                # MongoDB connection setup
+│   │   └── env.ts               # Environment variable setup
+│   │
+│   ├── 📂 modules                # All modules (features) of the application
+│   │   ├── 📂 book_shop          # Book-related functionalities
+│   │   │   ├── product.controller.ts
+│   │   │   ├── product.interface.ts
+│   │   │   ├── product.model.ts
+│   │   │   ├── product.route.ts
+│   │   │   ├── product.service.ts
+│   │   │   └── product.zod.validation.ts
+│   │   │
+│   │   ├── 📂 book_shop_order    # Order-related functionalities
+│   │   │   ├── order.controller.ts
+│   │   │   ├── order.interface.ts
+│   │   │   ├── order.model.ts
+│   │   │   ├── order.route.ts
+│   │   │   ├── order.service.ts
+│   │   │   └── order.zod.validation.ts
+│   │
+│   ├── 📂 utils                  # Reusable utility functions
+│   │   ├── customError.ts       # Custom error class for error handling
+│   │   ├── errorHandler.ts      # Global error handler middleware
+│   │   ├── logger.ts            # Logger setup for debugging
+│   │   └── response.ts          # Standard API response format utility
+│   │
+│   ├── app.ts                    # Application setup (middleware, routes, etc.)
+│   ├── server.ts                 # Server startup file
+│   └── routes.ts                 # Centralized route management
+│
+├── 📂 dist                       # Compiled output (TypeScript -> JavaScript)
+│
+├── 📂 node_modules               # Installed dependencies
+│
+├── .env                          # Environment variables file
+├── .gitignore                    # Ignored files for Git
+├── package.json                  # Project dependencies and scripts
+├── package-lock.json             # Locked dependency versions
+├── tsconfig.json                 # TypeScript configuration
+└── README.md                     # Project documentation
+
 ```
 
 ---
