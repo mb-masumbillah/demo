@@ -7,7 +7,7 @@ An advanced RESTful API for managing an online bookstore, built with **Express.j
 ## **Live Demo**
 
 - **API Base URL:** [https://book-shop-server-green.vercel.app/](https://book-shop-server-green.vercel.app/)  
-  _(Replace with your live deployment URL)_
+
 
 ---
 
